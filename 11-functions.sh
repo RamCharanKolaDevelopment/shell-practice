@@ -11,9 +11,9 @@ fi
 # like in other programming langiages in shell we can use VALIDATE to write reusable functions.
 VALIDATE() {
     if [ $1 -eq 0 ]; then
-        echo "$2...FAILURE"
-    else
         echo "$2...SUCCESS"
+    else
+        echo "$2...FAILURE"
     fi
 }
 
