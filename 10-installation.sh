@@ -5,8 +5,14 @@ user=$(id -u)
 
 if [ $user -ne 0 ]; then
     echo "you should run this script with root user access to install nginx."
-# elif [ $user -eq 0 ]; then
-#     dnf install nginx -y
 fi
 
+echo "installing....nginx"
 dnf install nginx -y
+
+if [ $? -ne 0 ]; then
+    echo "installation....FAILURE"
+else
+    echo "installation...SUCCESS"
+fi
+
