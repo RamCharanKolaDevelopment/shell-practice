@@ -5,6 +5,7 @@ user=$(id -u)
 
 if [ $user -ne 0 ]; then
     echo "you should run this script with root user access to install nginx."
+    exit 1
 fi
 
 echo "installing....nginx"
