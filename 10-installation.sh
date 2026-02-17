@@ -14,6 +14,7 @@ fi
 echo "installing....nginx"
 dnf install nginx -y
 
+# $? is to get last executed command status, this value will be from 0 to 127
 if [ $? -ne 0 ]; then
     echo "installation....FAILURE"
 else
