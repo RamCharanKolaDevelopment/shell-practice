@@ -17,6 +17,6 @@ if [ $num -gt 20 ]; then
     echo "$num is greater than 20" # should provide tab space to write & execute statements inside if/elif/else blocks
 elif [ $num -lt 20 ]; then # else if block
     echo "$num is less than 20"
-else [ $num -eq 20 ]; then
+else [ $num -eq 20 ]
     echo "$num equal to 20"
 fi
