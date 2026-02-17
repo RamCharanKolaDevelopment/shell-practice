@@ -6,3 +6,5 @@
 
 echo "Hello world!"
 # “echo” is used as print, to print text like “Hello World” like print/println in python programming language.
+
+echo "I am your second shell script message"
