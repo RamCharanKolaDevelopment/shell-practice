@@ -9,3 +9,6 @@ num3=ramcharan
 
 # performing Addition arithmetic operation
 echo "Sum of num1 & num2 is : $(($num1+$num2))"
+
+# performing addition arithmetic operation with string
+echo "Sum of num1 & num2 is : $(($num1+$num3))"
