@@ -7,6 +7,6 @@ num1=25
 # -eq => equal
 # -ne => not equal
 
-if [$num1 -gt 20]; then # should provide space after if
+if [ $num1 -gt 20 ]; then # should provide space
     echo "num1 is greater than 20"
 fi
