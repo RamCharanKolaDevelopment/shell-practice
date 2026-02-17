@@ -17,3 +17,23 @@ else
     echo "installation...SUCCESS"
 fi
 
+echo "installing...mysql"
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+    echo "installation...FAILURE"
+else
+    echo "installation...SUCCESS"
+fi
+
+echo "installing...nodejs"
+dnf install nodejs -y
+
+if [ $? -ne 0 ]; then
+    echo "installation...FAILURE"
+else
+    echo "installation...SUCCESS"
+fi
+
+
+
