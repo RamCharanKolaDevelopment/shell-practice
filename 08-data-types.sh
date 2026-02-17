@@ -24,4 +24,4 @@ echo "Firsts fruit : ${fruits[0]}"
 # accessing second index element of fruits array
 echo "Second fruit : ${fruits[1]}"
 # accessing third index element of fruits array
-echo "Third fruit : ${fruit[2]}"
+echo "Third fruit : ${fruits[2]}"
