@@ -11,4 +11,17 @@ num3=ramcharan
 echo "Sum of num1 & num2 is : $(($num1+$num2))"
 
 # performing addition arithmetic operation with string
-echo "Sum of num1 & num2 is : $(($num1+$num3))"
+echo "Sum of num1 & num2 is : $(($num1+$num3))" # here Linux assumed that Nun3 variable as a zero number.
+
+
+# array data type declaration
+fruits=("apple", "orange", "grapes")
+
+# accessing all elements of an array
+echo "Fruits are : ${fruits[@]}"
+# accessing first index element of fruits array
+echo "Firsts fruit : ${fruits[0]}"
+# accessing second index element of fruits array
+echo "Second fruit : ${fruits[1]}"
+# accessing third index element of fruits array
+echo "Third fruit : ${fruit[2]}"
