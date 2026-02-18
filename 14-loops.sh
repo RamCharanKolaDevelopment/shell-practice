@@ -13,7 +13,7 @@ mkdir -p /var/log/shell-practice"
 
 VALIDATE() {
     if [ $1 -ne 0 ]; then
-        echo "$2 ... FAILURE" | tee -a $log_file
+        echo "$2...FAILURE" | tee -a $log_file
         exit 1
     else
         echo "$2...SUCCESS" | tee -a $log_file
