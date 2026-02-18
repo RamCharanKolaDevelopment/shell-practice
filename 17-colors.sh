@@ -17,9 +17,9 @@ mkdir -p $log_folder
 
 VALIDATE() {
     if [ $1 -ne 0 ]; then
-        echo "$R $2...FAILURE $N" | tee -a $log_file
+        echo "$2 $R ...FAILURE $N" | tee -a $log_file
     else
-        echo "$G $2...SUCCESS $N" | tee -a $log_file
+        echo "$2 $G ...SUCCESS $N" | tee -a $log_file
     fi
 }
 
@@ -27,9 +27,9 @@ for package in $@
 do
     dnf list installed $package &>> $log_file
     if [ $? -ne 0 ]; then
-        echo "$R $package not installed, $N installing now" | tee -a $log_file
+        echo "$package $R not installed, $N installing now" | tee -a $log_file
         VALIDATE $? "$package installation"
     else
-        echo "$G $package already installed, $Y skipping" | tee -a $log_file
+        echo "$package $G already installed, $Y skipping" | tee -a $log_file
     fi
 done
