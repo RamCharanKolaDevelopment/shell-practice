@@ -5,6 +5,7 @@ log_folder="/var/log/shell-practice"
 log_file="/var/log/shell-practice/$0.log"
 
 if [ $user_id -ne 0 ]; then
+    # "| tee -a $log_file" is used to show echo print message & to store print messages in log life as well
     echo "you should need root user access to run this script" | tee -a $log_file
     exit 1
 fi
@@ -21,6 +22,7 @@ VALIDATE() {
     fi
 }
 
+# "&>> $log_file" => to hide installation message & to store thise in log file
 dnf install nginx -y &>> $log_file
 VALIDATE $? "installing nginx"
 
