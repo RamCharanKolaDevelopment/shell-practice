@@ -1,8 +1,8 @@
 #!/bin/bash
 
 user_id=$(id -u)
-log_folder="var/log/shell-practice"
-log_file="var/log/shell-practice/$0.log"
+log_folder="/var/log/shell-practice"
+log_file="/var/log/shell-practice/$0.log"
 
 if [ $user_id -ne 0 ]; then
     echo "you should run this script with root access" | tee -a $log_file
