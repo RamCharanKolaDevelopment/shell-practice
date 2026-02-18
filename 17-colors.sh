@@ -30,6 +30,6 @@ do
         echo -e "$package $R not installed, $N installing now" | tee -a $log_file
         VALIDATE $? "$package installation"
     else
-        echo -e "$package $G already installed, $Y skipping" | tee -a $log_file
+        echo -e "$package $G already installed, $Y skipping $N" | tee -a $log_file
     fi
 done
