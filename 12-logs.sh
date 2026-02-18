@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user=$(id -u)
+user_id=$(id -u)
 log_folder="/var/log/shell-practice"
 log_file="/var/log/shell-practice/$0.log"
 
-if [ $user -ne 0 ]; then
+if [ $user_id -ne 0 ]; then
     echo "you should need root user access to run this script" | tee -a $log_file
     exit 1
 fi
@@ -14,7 +14,7 @@ mkdir -p $log_folder
 
 VALIDATE() {
     if [ $1 -ne 0 ]; then
-        echo "$1...FAILURE" | tee -a $log_file
+        echo "$2...FAILURE" | tee -a $log_file
         exit 1
     else
         echo "$2...SUCCESS" | tee -a $log_file
