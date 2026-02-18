@@ -13,7 +13,7 @@ fi
 mkdir -p $log_folder
 
 VALIDATE() {
-    if [ $? -ne 0 ]; then
+    if [ $1 -ne 0 ]; then
         echo "$1...FAILURE" | tee -a $log_file
         exit 1
     else
