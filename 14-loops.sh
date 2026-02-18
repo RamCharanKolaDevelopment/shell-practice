@@ -20,7 +20,7 @@ VALIDATE() {
     fi
 }
 
-for package in $@
+for package in $@ # sudo sh 14-loops.sh nginx mysql nodejs => "nginx mysql nodejs" should pass after running this script otherwise will not find any output
 do
     dnf install $package -y &>> $log_file
     VALIDATE $? "$package installation"
