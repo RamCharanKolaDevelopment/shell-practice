@@ -2,7 +2,7 @@
 
 user_id=$(id -u)
 log_folder="/var/log/shell-practice"
-log_file="/var/log/shell-practice"
+log_file="/var/log/shell-practice/$0.log"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
