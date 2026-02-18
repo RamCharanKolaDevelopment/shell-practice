@@ -9,7 +9,7 @@ if [ $user_id -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p /var/log/shell-practice
+mkdir -p $log_folder
 
 VALIDATE() {
     if [ $1 -ne 0 ]; then
